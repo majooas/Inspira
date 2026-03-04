@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>COSMOS | Messaging &amp; Contact</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;family=Playfair+Display:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0047FF",
+                        "bttr-black": "#000000",
+                        "bttr-grey": "#111111",
+                        "bttr-border": "#222222",
+                        "bttr-text-muted": "#666666",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .vertical-text {
+                writing-mode: vertical-rl;
+            }
+        }
+        .sidebar-dot {
+            height: 4px;
+            width: 4px;
+            background-color: #444;
+            border-radius: 50%;
+            transition: width 0.3s ease, background-color 0.3s ease;
+        }
+        .sidebar-item:hover .sidebar-dot {
+            width: 20px;
+            background-color: #0047FF;
+            border-radius: 2px;
+        }
+        .chat-line {
+            border-bottom: 1px solid #1a1a1a;
+        }
+        input::placeholder {
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body class="bg-bttr-black font-display text-white selection:bg-primary/40 overflow-hidden h-screen">
+<aside class="fixed left-0 top-0 h-screen w-16 border-r border-bttr-border bg-bttr-black z-50 flex flex-col items-center py-10">
+<div class="mb-16">
+<div class="w-8 h-8 bg-primary flex items-center justify-center">
+<span class="text-white font-black text-lg tracking-tighter">C</span>
+</div>
+</div>
+<nav class="flex flex-col gap-10 flex-1">
+<a class="sidebar-item group flex flex-col items-center gap-2" href="#">
+<div class="sidebar-dot"></div>
+</a>
+<a class="sidebar-item group flex flex-col items-center gap-2" href="#">
+<div class="sidebar-dot"></div>
+</a>
+<a class="sidebar-item group flex flex-col items-center gap-2" href="#">
+<div class="sidebar-dot"></div>
+</a>
+<a class="sidebar-item group flex flex-col items-center gap-2" href="#">
+<div class="sidebar-dot w-5 bg-primary rounded-sm"></div>
+</a>
+</nav>
+<div class="mt-auto">
+<div class="sidebar-item group cursor-pointer">
+<div class="sidebar-dot"></div>
+</div>
+</div>
+</aside>
+<main class="ml-16 h-screen flex overflow-hidden">
+<section class="w-[400px] border-r border-bttr-border flex flex-col bg-bttr-black">
+<div class="p-8 border-b border-bttr-border flex justify-between items-center">
+<h2 class="text-[11px] font-black uppercase tracking-[0.4em]">Directory</h2>
+<span class="material-symbols-outlined text-sm text-bttr-text-muted cursor-pointer hover:text-white transition-colors">search</span>
+</div>
+<div class="flex-1 overflow-y-auto no-scrollbar">
+<div class="group border-b border-bttr-border bg-bttr-grey/30 cursor-pointer">
+<div class="p-8 flex items-center justify-between group-hover:bg-bttr-grey transition-colors">
+<div class="flex flex-col gap-1">
+<span class="text-[12px] font-bold uppercase tracking-widest text-white">Julian Rossi</span>
+<span class="text-[9px] text-primary font-black uppercase tracking-[0.2em]">Architecture</span>
+</div>
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+</div>
+</div>
+<div class="group border-b border-bttr-border cursor-pointer">
+<div class="p-8 flex items-center justify-between hover:bg-bttr-grey transition-colors">
+<div class="flex flex-col gap-1">
+<span class="text-[12px] font-bold uppercase tracking-widest text-white">Sora Oh</span>
+<span class="text-[9px] text-bttr-text-muted font-bold uppercase tracking-[0.2em]">Visual Arts</span>
+</div>
+</div>
+</div>
+<div class="group border-b border-bttr-border cursor-pointer">
+<div class="p-8 flex items-center justify-between hover:bg-bttr-grey transition-colors">
+<div class="flex flex-col gap-1">
+<span class="text-[12px] font-bold uppercase tracking-widest text-white">Marc Newson</span>
+<span class="text-[9px] text-bttr-text-muted font-bold uppercase tracking-[0.2em]">Industrial</span>
+</div>
+</div>
+</div>
+<div class="group border-b border-bttr-border cursor-pointer">
+<div class="p-8 flex items-center justify-between hover:bg-bttr-grey transition-colors">
+<div class="flex flex-col gap-1">
+<span class="text-[12px] font-bold uppercase tracking-widest text-white">Elena Vost</span>
+<span class="text-[9px] text-bttr-text-muted font-bold uppercase tracking-[0.2em]">Curation</span>
+</div>
+</div>
+</div>
+<div class="group border-b border-bttr-border cursor-pointer">
+<div class="p-8 flex items-center justify-between hover:bg-bttr-grey transition-colors">
+<div class="flex flex-col gap-1">
+<span class="text-[12px] font-bold uppercase tracking-widest text-white">Kento Yamazaki</span>
+<span class="text-[9px] text-bttr-text-muted font-bold uppercase tracking-[0.2em]">Photography</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-8 border-t border-bttr-border">
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-bttr-border flex items-center justify-center text-[10px] font-black">AD</div>
+<span class="text-[10px] font-black uppercase tracking-[0.3em] group-hover:text-primary transition-colors">Active Profile</span>
+</div>
+</div>
+</section>
+<section class="flex-1 flex flex-col bg-bttr-black">
+<header class="h-24 border-b border-bttr-border px-12 flex items-center justify-between">
+<div class="flex items-center gap-6">
+<h3 class="text-2xl font-serif uppercase tracking-tight">Julian Rossi</h3>
+<div class="h-px w-12 bg-bttr-border"></div>
+<span class="text-[10px] font-black text-bttr-text-muted uppercase tracking-[0.3em]">Project: Monolith House</span>
+</div>
+<div class="flex gap-8 items-center">
+<button class="text-[10px] font-black uppercase tracking-[0.3em] hover:text-primary transition-colors">Files</button>
+<button class="text-[10px] font-black uppercase tracking-[0.3em] hover:text-primary transition-colors">Contract</button>
+<span class="material-symbols-outlined text-lg text-bttr-text-muted cursor-pointer">more_vert</span>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-12 lg:p-20 no-scrollbar space-y-16">
+<div class="chat-line pb-12">
+<div class="flex justify-between items-baseline mb-6">
+<span class="text-[10px] font-black uppercase tracking-[0.3em] text-primary">Julian Rossi</span>
+<span class="text-[9px] text-bttr-text-muted font-medium uppercase tracking-[0.2em]">10:42 AM</span>
+</div>
+<p class="text-sm md:text-base leading-relaxed text-gray-200 max-w-2xl">
+                        I have updated the structural drafts for the south-facing atrium. The concrete texture should be more porous than we initially discussed to better capture the morning light.
+                    </p>
+</div>
+<div class="chat-line pb-12">
+<div class="flex justify-between items-baseline mb-6">
+<span class="text-[10px] font-black uppercase tracking-[0.3em] text-white">You</span>
+<span class="text-[9px] text-bttr-text-muted font-medium uppercase tracking-[0.2em]">11:15 AM</span>
+</div>
+<p class="text-sm md:text-base leading-relaxed text-gray-200 max-w-2xl">
+                        Agreed. The porous finish will provide the brutalist warmth we are aiming for. Did you receive the revised site measurements from the surveying team?
+                    </p>
+</div>
+<div class="chat-line pb-12">
+<div class="flex justify-between items-baseline mb-6">
+<span class="text-[10px] font-black uppercase tracking-[0.3em] text-primary">Julian Rossi</span>
+<span class="text-[9px] text-bttr-text-muted font-medium uppercase tracking-[0.2em]">11:20 AM</span>
+</div>
+<p class="text-sm md:text-base leading-relaxed text-gray-200 max-w-2xl">
+                        Received. Everything aligns with the 0.5mm tolerance. I am sending the final render package now for your review. It contains the light studies for both winter and summer solstices.
+                    </p>
+</div>
+<div class="chat-line pb-12 border-none">
+<div class="flex justify-between items-baseline mb-6">
+<span class="text-[10px] font-black uppercase tracking-[0.3em] text-primary">Julian Rossi</span>
+<span class="text-[9px] text-bttr-text-muted font-medium uppercase tracking-[0.2em]">Just Now</span>
+</div>
+<div class="bg-bttr-grey border border-bttr-border p-6 flex items-center justify-between max-w-md group cursor-pointer hover:border-primary transition-all">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">description</span>
+<div>
+<p class="text-[10px] font-black uppercase tracking-[0.2em]">MONOLITH_SOLSTICE_STUDY.PDF</p>
+<p class="text-[8px] text-bttr-text-muted uppercase tracking-[0.1em]">14.2 MB — PDF</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-sm text-bttr-text-muted group-hover:text-primary">download</span>
+</div>
+</div>
+</div>
+<div class="p-12 border-t border-bttr-border">
+<div class="relative flex items-center">
+<input class="w-full bg-transparent border-none focus:ring-0 text-sm tracking-wide py-4 pr-16 placeholder:text-bttr-border uppercase" placeholder="Message Julian Rossi..." type="text"/>
+<button class="absolute right-0 flex items-center justify-center group">
+<span class="material-symbols-outlined text-primary font-light text-3xl rotate-[-45deg] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">arrow_right_alt</span>
+</button>
+</div>
+<div class="flex gap-6 mt-4">
+<button class="text-[9px] font-black text-bttr-text-muted uppercase tracking-[0.3em] hover:text-white transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">attach_file</span> Attach
+                    </button>
+<button class="text-[9px] font-black text-bttr-text-muted uppercase tracking-[0.3em] hover:text-white transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">schedule</span> Schedule
+                    </button>
+</div>
+</div>
+</section>
+</main>
+
+</body></html>

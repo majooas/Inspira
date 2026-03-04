@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cosmos — Colorful Fashion Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,700;0,900;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0047FF",
+                        "bttr-black": "#000000",
+                        "bttr-grey": "#1A1A1A",
+                        "bttr-border": "#222222",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .masonry-grid {
+                column-count: 2;
+                column-gap: 5rem;
+            }
+            @media (min-width: 1536px) {
+                .masonry-grid {
+                    column-count: 2;
+                }
+            }
+            .masonry-item {
+                break-inside: avoid;
+                margin-bottom: 5rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-bttr-black font-display text-white selection:bg-primary/40 overflow-hidden">
+<aside class="fixed left-0 top-0 h-screen w-80 border-r border-bttr-border bg-bttr-black z-50 flex flex-col p-10">
+<div class="mb-24">
+<div class="w-10 h-10 bg-primary flex items-center justify-center">
+<span class="text-white font-black text-xl tracking-tighter">C</span>
+</div>
+</div>
+<nav class="flex flex-col flex-1">
+<div class="mb-8">
+<span class="text-[10px] font-black tracking-[0.4em] uppercase text-gray-500">Explore</span>
+</div>
+<ul class="flex flex-col gap-6">
+<li>
+<a class="group flex items-baseline gap-4" href="#">
+<span class="text-[10px] font-black text-primary/40 group-hover:text-primary transition-colors">01</span>
+<span class="text-4xl font-serif font-black uppercase tracking-tighter text-white/30 group-hover:text-white transition-colors">Architecture</span>
+</a>
+</li>
+<li>
+<a class="group flex items-baseline gap-4" href="#">
+<span class="text-[10px] font-black text-primary">02</span>
+<span class="text-4xl font-serif font-black uppercase tracking-tighter text-primary">Fashion</span>
+</a>
+</li>
+<li>
+<a class="group flex items-baseline gap-4" href="#">
+<span class="text-[10px] font-black text-primary/40 group-hover:text-primary transition-colors">03</span>
+<span class="text-4xl font-serif font-black uppercase tracking-tighter text-white/30 group-hover:text-white transition-colors">Multimedia</span>
+</a>
+</li>
+<li>
+<a class="group flex items-baseline gap-4" href="#">
+<span class="text-[10px] font-black text-primary/40 group-hover:text-primary transition-colors">04</span>
+<span class="text-4xl font-serif font-black uppercase tracking-tighter text-white/30 group-hover:text-white transition-colors">Industrial</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="mt-auto pt-10 border-t border-bttr-border">
+<div class="flex flex-col gap-4">
+<a class="text-[10px] font-bold tracking-[0.3em] uppercase text-gray-500 hover:text-white transition-colors" href="#">Archive</a>
+<a class="text-[10px] font-bold tracking-[0.3em] uppercase text-gray-500 hover:text-white transition-colors" href="#">Profile</a>
+<a class="text-[10px] font-bold tracking-[0.3em] uppercase text-gray-500 hover:text-white transition-colors" href="#">Search</a>
+</div>
+</div>
+</aside>
+<main class="ml-80 h-screen overflow-y-auto no-scrollbar relative">
+<header class="sticky top-0 z-40 bg-bttr-black/90 backdrop-blur-xl px-12 py-8 flex justify-between items-center border-b border-bttr-border/50">
+<div class="flex items-center gap-6">
+<span class="text-[10px] font-black tracking-[0.5em] uppercase text-primary">Chroma Collection</span>
+<span class="text-[10px] font-black tracking-[0.3em] uppercase text-gray-500">Fashion — Vol. 25</span>
+</div>
+<div class="flex items-center gap-8">
+<button class="material-symbols-outlined text-gray-400 hover:text-white transition-colors">grid_view</button>
+<button class="material-symbols-outlined text-gray-400 hover:text-white transition-colors">sort</button>
+</div>
+</header>
+<section class="px-16 py-16">
+<div class="masonry-grid max-w-7xl mx-auto">
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden aspect-[3/4] mb-6">
+<img alt="Avant-garde Crimson Dress" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWpzni2KJJODQXH3Nl_p4lDUwhYyZkJw215atMq5PubNEVinnE999YSAyf2T_4tnBbPtz-plQ53fACFcI3pk435tx_-zY-TPzvAM_aKJRHfN5M4TeSZc-Bq2HvIbbfoyQ6gUlODrFDgrrrgfoMxOBRz-sGCx3XUpHRxYxnrYc0iU24jF5Mv-hUYxonzL8Kw4RIO1sFJo94ZQvV4IBIKJtiVlJGcs_9Mj21dd-6GwRhroHCE4-PJ83gE9usohFsh54i71P_frSU4Wc"/>
+<div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xs font-black uppercase tracking-widest mb-1">Crimson Avant-Garde</h3>
+<p class="text-[10px] text-gray-500 uppercase tracking-widest">High-Fidelity Editorial</p>
+</div>
+<span class="text-[10px] font-black text-primary">02.1</span>
+</div>
+</div>
+<div class="masonry-item group cursor-pointer pt-20">
+<div class="relative overflow-hidden aspect-[4/5] mb-6">
+<img alt="Emerald Green Couture" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoBwA5idH1LONcFjMmKN5qC7_SunBArpcB8bkQ3SIqgrBuEPw7rZgmDZJtr5CP351QCVcYJVytOA0vcOIWTAZJR0uumMob2WFfu7UuONXfTo048XtO_6_OV9nAH7bLhWBofBKbtUTTsl69TWkCPLJ0vMSRjqZq9fsidXzLgTw2A8HUkeyFUW_emPZ6uxSPNCYOYV0wCfnNutBoDXuLv-LSAtomEN0ua4SFErRRBk2V_Nz_qpZ47Vz5Ez45mP6yqjD6sf1QjupQ7A0"/>
+<div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xs font-black uppercase tracking-widest mb-1">Emerald Synthesis</h3>
+<p class="text-[10px] text-gray-500 uppercase tracking-widest">Luxury Textile Study</p>
+</div>
+<span class="text-[10px] font-black text-primary">02.2</span>
+</div>
+</div>
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden aspect-square mb-6">
+<img alt="Cobalt Fashion Posing" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwbBaAEiDEkDEYM0O71kLh2VEOnMsG890G9GF4rgD75gpBcKkKsNYOuZxfGdruwIVNkbBYum19BveU3_gX8X8U6v1OQPCq2Qpbb0JH6yjMk1mGLP7hf2B85uLTSBokZ1XZ2TP3H7DfSJiBDyhq6Idbgmk4_9YU01_7tR_DeOdziSkVt5bisG4TB_x0Z6P1oHjN8WxDVNQAdW3X0Sm0b04AdNm6tpvl-daYz7iZpdWuGUT4RPkbKyT8MNAfPvB7A2O7DwGUSw1buxo"/>
+<div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xs font-black uppercase tracking-widest mb-1">Cobalt Narrative</h3>
+<p class="text-[10px] text-gray-500 uppercase tracking-widest">Editorial Portfolio</p>
+</div>
+<span class="text-[10px] font-black text-primary">02.3</span>
+</div>
+</div>
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden aspect-[2/3] mb-6">
+<img alt="Sunset Ochre Fashion" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTLTcPy6RD_aw56zkkryCNYUb_gPTMc0H3CYUikAfK5UIlW5VKXoFFkwIdi4kG83UPzWQlSXiiQZlgEWd-bth2rGNdfY7zIQozyuipDN4Uat6uE9lpF12k_tJ0RK_w36x9q6zySRkpU5w6KWrmwpee69AA4JjZRa9b8fPw2KSqyFIpxacYjhq1v6f-sjsj4hvQOG5idR0wz3FoR9Ay86ZKmiPb8JFKrXWwNS9j8zPdq9mooK3l-TQKJryNrA-JBlROVcTPxrC_WTQ"/>
+<div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xs font-black uppercase tracking-widest mb-1">Ochre Luminescence</h3>
+<p class="text-[10px] text-gray-500 uppercase tracking-widest">Seasonal Material Analysis</p>
+</div>
+<span class="text-[10px] font-black text-primary">02.4</span>
+</div>
+</div>
+<div class="masonry-item group cursor-pointer pt-12">
+<div class="relative overflow-hidden aspect-[4/5] mb-6">
+<img alt="Violet Structural Couture" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCldwPizoGsoR0w4DVyhevKt_zHkEQhtBVfFNpUWoaoEYDWVnOdZ3MGsBDwWLgmmzuQ497t3XgwroX5M6rWSBHjTWsMH-YUm5R9H21ozSACTmCln1v_st6IDYcQEP2n-tBeSnyd9ub7ueGDLQILkjXJtl2NOVTLyhi8_4fXPF0BU5oZFeLxIuKwWMZ6HTW50fLYMOf0hRllxLVBX2Eb0PSgCBWdqkZCm_ACIbKuwfQdXrifnIMiAT_wi5sxHdyEo0pBHPo7Kz9eKNo"/>
+<div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xs font-black uppercase tracking-widest mb-1">Violet Architecture</h3>
+<p class="text-[10px] text-gray-500 uppercase tracking-widest">Structural Form Concept</p>
+</div>
+<span class="text-[10px] font-black text-primary">02.5</span>
+</div>
+</div>
+</div>
+<footer class="mt-40 border-t border-bttr-border pt-12 pb-24 flex justify-between items-end">
+<div class="max-w-xs">
+<p class="text-[10px] uppercase tracking-[0.3em] leading-relaxed text-gray-500">
+                        High-fidelity chroma archive. All rights reserved by Cosmos Design Platform.
+                    </p>
+</div>
+<div class="flex gap-16 text-[9px] font-black text-gray-600 uppercase tracking-[0.4em]">
+<span class="text-white">Active Category: Fashion Chroma</span>
+<span class="hover:text-white cursor-pointer transition-colors">Load More Works +</span>
+</div>
+</footer>
+</section>
+</main>
+
+</body></html>

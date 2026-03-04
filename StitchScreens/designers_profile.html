@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cosmos — Designer Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,700;0,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0047FF",
+                        "bttr-black": "#000000",
+                        "bttr-grey": "#111111",
+                        "bttr-border": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .text-huge {
+                font-size: clamp(5rem, 15vw, 14rem);
+                line-height: 0.8;
+            }
+            .mono-high-contrast {
+                filter: grayscale(100%) contrast(120%) brightness(90%);
+            }
+        }
+        .sidebar-dot {
+            height: 2px;
+            width: 8px;
+            background-color: #333;
+            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease;
+        }
+        .sidebar-item:hover .sidebar-dot {
+            width: 24px;
+            background-color: #0047FF;
+        }
+    </style>
+</head>
+<body class="bg-bttr-black font-display text-white selection:bg-primary/40 overflow-x-hidden">
+<aside class="fixed left-0 top-0 h-screen w-16 border-r border-bttr-border bg-bttr-black z-50 flex flex-col items-center py-8">
+<div class="mb-20">
+<div class="text-primary font-black text-2xl tracking-tighter">C</div>
+</div>
+<nav class="flex flex-col gap-12 flex-1">
+<a class="sidebar-item group flex flex-col items-center" href="#">
+<div class="sidebar-dot"></div>
+</a>
+<a class="sidebar-item group flex flex-col items-center" href="#">
+<div class="sidebar-dot"></div>
+</a>
+<a class="sidebar-item group flex flex-col items-center" href="#">
+<div class="sidebar-dot"></div>
+</a>
+<a class="sidebar-item group flex flex-col items-center" href="#">
+<div class="sidebar-dot"></div>
+</a>
+</nav>
+<div class="mt-auto">
+<div class="sidebar-item group cursor-pointer mb-4">
+<div class="sidebar-dot"></div>
+</div>
+</div>
+</aside>
+<main class="ml-16 min-h-screen">
+<section class="relative h-[95vh] w-full overflow-hidden border-b border-bttr-border">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center mono-high-contrast" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJnJcUcpIeEJaD5ucMGRiygLlnC7uIOpkIWXAHID0-dHWu9Lmp-3ai7jxGb8YRNMmB1FGcidY9Dmn7EGXjeUDqUO6Wggeixd1vGZ0YYre7bkBJoo9jmX2C1HyMwV6PZscwy9zAAQxW9_jlcw8t4oZ05VJiHoOj7PUKRqDSPSYtvyLHQ3G770pynwaZtocvBlwVIODEWeh0wlCdLUB91vHD9WC32ns2RlhqQWF5J8amL76va9x0tvslZVFrWohJg4ek-QSwf-FM3xw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+</div>
+<div class="relative z-10 h-full flex flex-col justify-end p-10 lg:p-20">
+<div class="max-w-[1400px] w-full">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-10">
+<div class="relative">
+<span class="text-[10px] font-bold tracking-[0.5em] text-primary uppercase mb-6 block">Featured Author — Profile 04/06</span>
+<h1 class="text-huge font-serif font-black tracking-tighter -ml-2 uppercase">
+                            Elena<br/>Vost
+                        </h1>
+</div>
+<div class="flex flex-col gap-8 pb-4">
+<p class="max-w-xs text-[11px] leading-relaxed uppercase tracking-[0.15em] text-gray-400">
+                            A multidisciplinary lead at COSMOS focused on the raw materiality of brutalist interiors and minimalist form. Based in Berlin.
+                        </p>
+<div class="flex gap-4">
+<button class="bg-primary text-white px-12 py-4 text-[10px] font-black uppercase tracking-[0.4em] hover:bg-white hover:text-primary transition-all duration-300">Follow</button>
+<button class="border border-gray-700 text-white px-10 py-4 text-[10px] font-black uppercase tracking-[0.4em] hover:border-white transition-all duration-300">Contact</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="p-10 lg:p-20">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-24 border-b border-bttr-border pb-12">
+<h2 class="font-serif text-6xl uppercase tracking-tighter">Selected Works</h2>
+<div class="flex gap-16 text-[9px] font-black uppercase tracking-[0.4em] text-gray-500 mt-8 md:mt-0">
+<a class="text-primary border-b border-primary pb-1" href="#">Index</a>
+<a class="hover:text-white transition-colors" href="#">Interiors</a>
+<a class="hover:text-white transition-colors" href="#">Objects</a>
+<a class="hover:text-white transition-colors" href="#">Editorial</a>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-1">
+<div class="lg:col-span-8 group border border-bttr-border bg-bttr-black overflow-hidden p-1">
+<div class="aspect-[16/9] overflow-hidden bg-bttr-grey">
+<div class="w-full h-full bg-cover bg-center mono-high-contrast group-hover:scale-105 transition-transform duration-1000" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBvIjPuJoJX3dTn5P1j3e-3yOzU8g21Z969IbBTwaaGFRGOAwDgAkO8vz9X22ZHBGHqkFop9ebyIewYPOlm4cj9ik0gEG8LCrULVtzld5xR4OcHoZUfKzxpGtqVWbM9j_bSSvLEMJM9uH5KHk63-V8aKwVN-zwMqLjoFlBmTlzqmnOcXHxhnwdJtPU7eSXkvRhV48NoF9kFgTruAFzH03vtpiwdwyrK0yyMKG9KrzpTetCI1ruqtec28y-2cOlp7PHHLNF1Ob22ees')"></div>
+</div>
+<div class="p-8 flex justify-between items-end">
+<div>
+<span class="text-[8px] font-bold tracking-[0.3em] text-primary uppercase block mb-2">01 — Architecture</span>
+<h3 class="text-2xl font-bold uppercase tracking-tight">Concrete Monolith</h3>
+</div>
+<span class="text-[8px] font-medium tracking-[0.3em] text-gray-500 uppercase pb-1">Winter 2023</span>
+</div>
+</div>
+<div class="lg:col-span-4 group border border-bttr-border bg-bttr-black overflow-hidden p-1">
+<div class="aspect-[3/4] overflow-hidden bg-bttr-grey">
+<div class="w-full h-full bg-cover bg-center mono-high-contrast group-hover:scale-105 transition-transform duration-1000" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDs8_br8xfzlZ2Vat7ugNLyJOascOoKPhgpOzssHonL7NfyZvoiT565Z3aaYwT8Fnkhyr0W90l-m_c23D1n3OR-UxhUDUb_E-QMnM25pY3NuQHexFt8EbyXidSlAYY_FHVLMwz1QmOQPcJ7CkC2GBFZe9es-wWMXgWZlYMqfrKMrxDMoZguSeneHgodtFpRHivy7NRy-wWiFdYZvYu9l3GMOLxhYf06vvLNybPGGw92UXqO0ZECAir1zG6KHnI0o4pxzPF15OCcU0o')"></div>
+</div>
+<div class="p-8">
+<span class="text-[8px] font-bold tracking-[0.3em] text-primary uppercase block mb-2">02 — Object</span>
+<h3 class="text-2xl font-bold uppercase tracking-tight mb-4">Form Study 01</h3>
+<span class="text-[8px] font-medium tracking-[0.3em] text-gray-500 uppercase">Spring 2024</span>
+</div>
+</div>
+<div class="lg:col-span-4 group border border-bttr-border bg-bttr-black overflow-hidden p-1">
+<div class="aspect-square overflow-hidden bg-bttr-grey">
+<div class="w-full h-full bg-cover bg-center mono-high-contrast group-hover:scale-105 transition-transform duration-1000" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYuHJykwKXThZ5C4j7-KQqX5J6oFIyC-uv1fgxp6yAIu5L6QNseBN_JUs7iy9gv8esudhvXA7ZdaSuhtVExd7KVL7OyJJ6-KS35XPRrkCwAr2qUSCZeNyvdW4hzY0IY6Hck8Lii1uZPwi06o3pKJBksdulF2pMKV9mEBsWrkGoLrD4Zl6f4J49iS53v0ByTndAl24U4Fgfc2ul4gWnz9EYELLWBWzxnEQ3TTqUXhFY0SvzONVqkdunHMV-KyQH00-yy5Z46uhEeCY')"></div>
+</div>
+<div class="p-8">
+<span class="text-[8px] font-bold tracking-[0.3em] text-primary uppercase block mb-2">03 — Visual</span>
+<h3 class="text-2xl font-bold uppercase tracking-tight mb-4">Shadow Dialogue</h3>
+<span class="text-[8px] font-medium tracking-[0.3em] text-gray-500 uppercase">Autumn 2023</span>
+</div>
+</div>
+<div class="lg:col-span-8 group border border-bttr-border bg-bttr-black overflow-hidden p-1">
+<div class="aspect-[16/9] overflow-hidden bg-bttr-grey">
+<div class="w-full h-full bg-cover bg-center mono-high-contrast group-hover:scale-105 transition-transform duration-1000" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTjay5QrUHdjUdkX3QG-dRWYwuVQvQfW2Sa6la_YtP2FRnZO8Tw2HaBuA5H7DwXg4u4vpcRtu_gyD8amc1RyY3-hIf9rwD4YiE4fGKCg7xTYiQoozo1o1TcWvymB1NjAPzkOenw2wRRl_j77MBgybtkSXyQgSNCEBl9WTVtWIuHuHPsO_xtJa7jV4Au70wxXLtRbNTn7r7I24kZSgsnzssMgvyMHtbSWlTmtVVWdOcfKQ9eeueciBzIvH17dMNdawTuFB0tQ5Jc7A')"></div>
+</div>
+<div class="p-8 flex justify-between items-end">
+<div>
+<span class="text-[8px] font-bold tracking-[0.3em] text-primary uppercase block mb-2">04 — Installation</span>
+<h3 class="text-2xl font-bold uppercase tracking-tight">Vortex Pavilion</h3>
+</div>
+<span class="text-[8px] font-medium tracking-[0.3em] text-gray-500 uppercase pb-1">Summer 2024</span>
+</div>
+</div>
+</div>
+</section>
+<section class="border-t border-bttr-border mt-12 bg-bttr-grey/30">
+<div class="p-10 lg:p-20">
+<div class="flex justify-between items-end mb-16">
+<h2 class="font-serif text-5xl uppercase tracking-tighter">Curated by Experts</h2>
+<div class="flex gap-4">
+<button class="w-12 h-12 flex items-center justify-center border border-bttr-border hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-sm">west</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center border border-bttr-border hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-sm">east</span>
+</button>
+</div>
+</div>
+<div class="flex gap-1 overflow-x-auto no-scrollbar pb-10">
+<div class="min-w-[450px] bg-bttr-black border border-bttr-border p-12 group">
+<div class="flex justify-between items-start mb-12">
+<span class="text-5xl font-black text-white/10 group-hover:text-primary transition-colors duration-500">01</span>
+<span class="text-[10px] font-bold text-primary tracking-[0.5em] uppercase">Selection A</span>
+</div>
+<div class="aspect-[4/3] bg-bttr-grey mb-10 overflow-hidden">
+<img alt="Collection" class="w-full h-full object-cover mono-high-contrast group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxzTlxAgAHG5ga0c1W9tcCzYdZsc78wLlIL-OYApLbTJF4-Dr6BunL0NJ8v60eevDvOK-Zzwomwio8rXEf1KM7ueKbPc319P_wsnU9ssYPjdNnLRHyeYp_Y_XIoHUW7Fcg8tbQRHrk_qJYXzZqsJNF65uIJHxX62qkPHzFG_7dQ6mKnq6YCFCCeJQrbQwNU-drOOSatGF3N-f4eZSZWMt3lmUZ7OWJq24af_elOujoiwCtMgkiu4e3wtvSzKEs9TU02G8DFdp6JQc"/>
+</div>
+<h4 class="text-2xl font-bold uppercase tracking-tighter mb-4">Brutalist Textures</h4>
+<p class="text-[9px] text-gray-500 tracking-[0.3em] uppercase">8 Artifacts / Curated by O. Keller</p>
+</div>
+<div class="min-w-[450px] bg-bttr-black border border-bttr-border p-12 group">
+<div class="flex justify-between items-start mb-12">
+<span class="text-5xl font-black text-white/10 group-hover:text-primary transition-colors duration-500">02</span>
+<span class="text-[10px] font-bold text-primary tracking-[0.5em] uppercase">Selection B</span>
+</div>
+<div class="aspect-[4/3] bg-bttr-grey mb-10 overflow-hidden">
+<img alt="Collection" class="w-full h-full object-cover mono-high-contrast group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB7Gt4cgTQf9gGwiA0GQ_FXXxYswds4D5JGFArugqya26U5fnngWXBTrrGpxzWVO-dL6QiGuUt9vArIdQD32wtBQ2LQFk0suc1BhKK2wP4YtE0yoKAbjdK0LMm7317Lv-tOlZA9eUammvXmJShDMJd0NO_mWAxFfRwB_ZXniE5-iA6CCPP8EzjXghlk4XORH3Y-bA5N37b6z9ZnPo1FPKQwDTl8hT81HyFUD2d-Uy3KC5BZ9_jaXaUQz61P6FUGp6UB9Rnsoqqc1Q"/>
+</div>
+<h4 class="text-2xl font-bold uppercase tracking-tighter mb-4">Silent Spaces</h4>
+<p class="text-[9px] text-gray-500 tracking-[0.3em] uppercase">12 Artifacts / Curated by S. Chen</p>
+</div>
+<div class="min-w-[450px] bg-bttr-black border border-bttr-border p-12 group">
+<div class="flex justify-between items-start mb-12">
+<span class="text-5xl font-black text-white/10 group-hover:text-primary transition-colors duration-500">03</span>
+<span class="text-[10px] font-bold text-primary tracking-[0.5em] uppercase">Selection C</span>
+</div>
+<div class="aspect-[4/3] bg-bttr-grey mb-10 overflow-hidden">
+<img alt="Collection" class="w-full h-full object-cover mono-high-contrast group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTjay5QrUHdjUdkX3QG-dRWYwuVQvQfW2Sa6la_YtP2FRnZO8Tw2HaBuA5H7DwXg4u4vpcRtu_gyD8amc1RyY3-hIf9rwD4YiE4fGKCg7xTYiQoozo1o1TcWvymB1NjAPzkOenw2wRRl_j77MBgybtkSXyQgSNCEBl9WTVtWIuHuHPsO_xtJa7jV4Au70wxXLtRbNTn7r7I24kZSgsnzssMgvyMHtbSWlTmtVVWdOcfKQ9eeueciBzIvH17dMNdawTuFB0tQ5Jc7A"/>
+</div>
+<h4 class="text-2xl font-bold uppercase tracking-tighter mb-4">Monochrome Vision</h4>
+<p class="text-[9px] text-gray-500 tracking-[0.3em] uppercase">5 Artifacts / Curated by E. Vost</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="border-t border-bttr-border p-10 lg:p-20 bg-bttr-black">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+<div class="lg:col-span-6">
+<div class="text-primary font-black text-3xl tracking-tighter mb-10">C</div>
+<p class="text-[10px] uppercase tracking-[0.4em] leading-[2] text-gray-500 max-w-sm">
+                    The ultra-minimalist professional standard for design authorship. Ethical curation, extreme precision. Established 2012.
+                </p>
+</div>
+<div class="lg:col-span-3">
+<h5 class="text-[10px] font-black uppercase tracking-[0.5em] mb-12 text-white/40">Navigation</h5>
+<ul class="flex flex-col gap-6 text-[9px] font-bold text-gray-400 uppercase tracking-[0.4em]">
+<li><a class="hover:text-primary transition-colors" href="#">Journal</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Profiles</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Archives</a></li>
+</ul>
+</div>
+<div class="lg:col-span-3">
+<h5 class="text-[10px] font-black uppercase tracking-[0.5em] mb-12 text-white/40">Dispatch</h5>
+<div class="border-b border-bttr-border pb-4 mb-8">
+<input class="bg-transparent border-none focus:ring-0 text-[10px] w-full p-0 tracking-[0.4em] uppercase placeholder:text-gray-800 text-white" placeholder="EMAIL ADDRESS" type="email"/>
+</div>
+<button class="text-primary font-black text-[10px] tracking-[0.6em] uppercase hover:text-white transition-colors">Join Society</button>
+</div>
+</div>
+<div class="mt-40 pt-12 border-t border-bttr-border flex flex-col md:flex-row justify-between items-center gap-8 text-[8px] font-bold text-gray-600 uppercase tracking-[0.6em]">
+<span>© 2024 COSMOS PROJECTS BUREAU</span>
+<div class="flex gap-12">
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</main>
+
+</body></html>
